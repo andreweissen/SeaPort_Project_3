@@ -1,0 +1,76 @@
+// File: aSPae.txt
+// Creator: Andrew Eissen
+// Notes: USS album titles are CargoShips, Muse album titles are PassengerShips
+//
+// Baltimore:
+//    Docks:
+//      Baltimore_Pier_1: Showbiz (PS)              needs James, John
+//      Baltimore_Pier_2: OriginOfSymmetry (PS)     needs Alex, John
+//      Baltimore_Pier_3: Absolution (PS)           needs None
+//      Baltimore_Pier_4: WeldingTheC:/ (CS)        needs Karen
+//
+//    Queue:
+//      Resistance (PS)                             needs Megan, James
+//      2ndLaw (PS)                                 needs None
+//
+// Bergen:
+//    Docks:
+//      Bergen_Pier_1: Questamation (CS)            needs Kjetil, Jostein
+//      Bergen_Pier_2: BlackHoles&Revel (PS)        needs Kristian, Kjell
+//      Bergen_Pier_3: Approved (CS)                needs None, can continue without workers
+//      Bergen_Pier_4: AdvancedBasics (CS)          needs None
+//
+//    Queue:
+//      Drones (PS)                                 needs (Job 1: Svea), (Job 2: Jostein, Kjetil, Kristian)
+//      NewWorldAlphabet (CS)                       needs None
+//
+//
+port          Baltimore 10000 0
+port             Bergen 10001 0
+
+dock   Baltimore_Pier_1 20000 10000 30000
+dock   Baltimore_Pier_2 20001 10000 30001
+dock   Baltimore_Pier_3 20002 10000 30002
+dock   Baltimore_Pier_4 20003 10000 40000
+
+dock      Bergen_Pier_1 20004 10001 40001
+dock      Bergen_Pier_2 20005 10001 30003
+dock      Bergen_Pier_3 20006 10001 40002
+dock      Bergen_Pier_4 20007 10001 40003
+
+pship                 Showbiz 30000 20000 99.53 493.49 121.43 41.89 1554 556 556
+pship        OriginOfSymmetry 30001 20001 232.39 120.81 120.03 35.79 2636 1040 1040
+pship              Absolution 30002 20002 69.91 423.19 62.86 17.07 1879 938 938
+pship        BlackHoles&Revel 30003 20005 92.90 397.94 41.05 36.70 306 653 153
+pship              Resistance 30004 10000 138.58 101.79 68.33 15.26 2358 946 946
+pship                  2ndLaw 30005 10000 71.87 140.82 35.74 36.90 1001 756 500
+pship                  Drones 30006 10001 248.22 267.37 48.72 42.90 1693 1011 846
+
+cship           WeldingTheC:/ 40000 20003 168.40 194.54 42.26 28.94 56.98 161.98 812.94
+cship            Questamation 40001 20004 118.47 126.85 88.45 23.27 130.62 117.77 765.56
+cship                Approved 40002 20006 90.35 374.66 94.83 31.17 44.06 103.16 780.00
+cship          AdvancedBasics 40003 20007 231.25 118.78 66.01 31.54 35.49 142.70 527.36
+cship        NewWorldAlphabet 40004 10001 189.95 255.87 71.08 20.11 25.76 132.35 364.84
+
+person                  James 50005 10000 inspector
+person                   John 50006 10000 cook
+person                   Alex 50007 10000 engineer
+person                  Karen 50008 10000 navigator
+person                  Megan 50009 10000 security
+
+person                 Kjetil 50000 10001 cook
+person                   Svea 50001 10001 engineer
+person                  Kjell 50002 10001 inspector
+person               Kristian 50003 10001 security
+person                Jostein 50004 10001 navigator
+
+job               J_BA_P_Sho1 60001 30000 48.19 inspector cook
+job               J_BA_P_Ori1 60002 30001 27.15 engineer cook
+job               J_BA_C_Wel1 60003 40000 71.89 navigator
+job               J_BA_P_Res1 60004 30004 82.10 security inspector
+
+job               J_BE_C_Que1 60005 40001 119.70 cook navigator
+job               J_BE_P_Bla1 60006 30003 38.56 security inspector
+job               J_BE_C_App1 60007 40002 115.00
+job               J_BE_P_Dro1 60008 30006 51.42 engineer
+job               J_BE_P_Dro2 60009 30006 67.88 navigator cook security
